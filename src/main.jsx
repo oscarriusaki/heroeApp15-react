@@ -5,9 +5,10 @@ import { AppRoute } from './router/AppRoute';
 import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <BrowserRouter>
-    <AppRoute />
-  </BrowserRouter>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <AppRoute />
+    </BrowserRouter>
+  </React.StrictMode>
 )
+// this is a text
