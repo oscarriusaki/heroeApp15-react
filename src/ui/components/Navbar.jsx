@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   return (
     <>
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-md bg-light">
         <div className="container-fluid">
             <Link className="navbar-brand" to='/'>Navbar</Link>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -24,13 +24,14 @@ export const Navbar = () => {
                     <NavLink className={({isActive}) => `nav-link ${isActive ? 'active': ''}`} to="/">Marvel</NavLink>
                     <NavLink className={({isActive}) => `nav-link ${isActive ? 'active': ''}`} to="/dc">Dc</NavLink>
                     <NavLink className={({isActive}) => `nav-link ${isActive ? 'active': ''}`} to='/search' >Search</NavLink>
+                    <NavLink className={({isActive}) => `nav-link ${isActive ? 'active': ''}`} to='/registrarHero' >registrar</NavLink>
                 </div>
                 <div className="collapse navbar-collapse justify-content-end">
                     <span className='nav-link nav-item text-primary'>{user.name}</span>
                     <button 
-                            className='nav-link nav-item btn'
-                            onClick={onLogout}
-                            >Logout</button>
+                        className='nav-link nav-item btn'
+                        onClick={onLogout}
+                        >Logout</button>
                 </div>
             </div>
         </div>

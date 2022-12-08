@@ -14,10 +14,10 @@ const init = () => {
 export const UserProvider = ({children}) => {
 
     const [state, dispatch] = useReducer(authReducer, {}, init);
-    const login = (name = '') => {
+    const login = (name = '', token='') => {
         const user = {
-            id: 1234,
-            name: name
+            name: name,
+            token:token
         }
         const action = {
             type: types.login,
@@ -28,6 +28,7 @@ export const UserProvider = ({children}) => {
     }
     const logout = () => {
         localStorage.removeItem('user');
+        localStorage.removeItem('token');
         // localStorage.removeItem('path');
         const action = {
             type: types.logout,

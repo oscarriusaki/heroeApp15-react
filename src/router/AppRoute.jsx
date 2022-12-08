@@ -14,9 +14,16 @@ export const AppRoute = () => {
             {/* <Route path='/login' element={<LoginPage /> } /> */}
             {/* <Route path='/register' element={<RegisterPage /> } /> */}
 
-            <Route path='/login' element={
+            <Route path='/login/*' element={
               <PublicRoute>
-                <LoginPage />
+                <Routes>
+                  <Route path='/*' element={<LoginPage /> } />
+                </Routes>
+              </PublicRoute>
+            } />
+            <Route path='/register' element={
+              <PublicRoute>
+                <RegisterPage />
               </PublicRoute>
             } />
 
